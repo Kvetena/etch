@@ -1,17 +1,30 @@
-:root {
+ :root {
     --grid-cols: 1;
     --grid-rows: 1;
+  }
+
+  body {
+      max-height: 100%;
+      max-width: 100%;
+      overflow: hidden;
   }
   
   #container {
     display: grid;
-    grid-gap: 1em;
+    /* grid-gap: 1em; */
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
   }
   
   .grid-item {
-    padding: 1em;
     border: 1px solid #ddd;
     text-align: center;
+    height: 100%;
+    width: 100%;
+  }
+  .grid-item-clicked {
+    background-color: aqua;
   }
